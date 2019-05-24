@@ -1,0 +1,35 @@
+
+{% if form == false %}
+    <table style="width:30%">
+        <tr>
+            <th style="text-align: left">
+                input
+            </th>
+            <th style="text-align: left">
+                output
+            </th>
+        </tr>
+        
+
+        {% for key, elem in result %}
+            <tr>
+                <td>
+                    {{ key }}
+                </td>
+                <td>
+                    {{ elem }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/task/number">
+        Powrót
+    </a>
+{% else %}
+    <h1>
+        Wpisz liczby w osobnych liniach
+    </h1>
+    {{ form(form) }}
+{% endif %}
+
